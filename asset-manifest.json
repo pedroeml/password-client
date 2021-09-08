@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/password-client/static/css/main.8f62bde1.chunk.css",
-    "main.js": "/password-client/static/js/main.093a8a66.chunk.js",
-    "main.js.map": "/password-client/static/js/main.093a8a66.chunk.js.map",
+    "main.css": "/password-client/static/css/main.1a10c3f7.chunk.css",
+    "main.js": "/password-client/static/js/main.431c0e54.chunk.js",
+    "main.js.map": "/password-client/static/js/main.431c0e54.chunk.js.map",
     "runtime-main.js": "/password-client/static/js/runtime-main.dcb4ab1a.js",
     "runtime-main.js.map": "/password-client/static/js/runtime-main.dcb4ab1a.js.map",
     "static/css/2.c490997a.chunk.css": "/password-client/static/css/2.c490997a.chunk.css",
@@ -12,14 +12,14 @@
     "static/js/3.cfcde2a6.chunk.js.map": "/password-client/static/js/3.cfcde2a6.chunk.js.map",
     "index.html": "/password-client/index.html",
     "static/css/2.c490997a.chunk.css.map": "/password-client/static/css/2.c490997a.chunk.css.map",
-    "static/css/main.8f62bde1.chunk.css.map": "/password-client/static/css/main.8f62bde1.chunk.css.map",
+    "static/css/main.1a10c3f7.chunk.css.map": "/password-client/static/css/main.1a10c3f7.chunk.css.map",
     "static/js/2.4f66ad18.chunk.js.LICENSE.txt": "/password-client/static/js/2.4f66ad18.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.dcb4ab1a.js",
     "static/css/2.c490997a.chunk.css",
     "static/js/2.4f66ad18.chunk.js",
-    "static/css/main.8f62bde1.chunk.css",
-    "static/js/main.093a8a66.chunk.js"
+    "static/css/main.1a10c3f7.chunk.css",
+    "static/js/main.431c0e54.chunk.js"
   ]
 }
