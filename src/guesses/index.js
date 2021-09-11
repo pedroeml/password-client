@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { ListGroup } from 'react-bootstrap';
 
-export default function GuessesComponent({ guesses, users }) {
+export default function GuessesComponent({ guesses, users, loggedUser }) {
   const [localGuesses, setLocalGuesses] = useState([]);
   
   useEffect(() => {
@@ -18,14 +18,25 @@ export default function GuessesComponent({ guesses, users }) {
     }
   }, [guesses, users]);
 
+  const getVariant = useCallback((user, correctChars) => {
+    if (correctChars === 5) {
+      return 'success';
+    } else if (user.id === loggedUser.id) {
+      return 'primary';
+    }
+
+    return undefined;
+  }, [loggedUser]);
+
   return (
     <ListGroup variant="flush">
       { 
         localGuesses.map(({ guess, correctChars, misplacedChars, user }, i) => (
-          <ListGroup.Item className="d-flex justify-content-between" variant={correctChars === 5 ? "success" : undefined} key={i}>
-            <strong className="text-muted font-monospace">{ user?.name }</strong>
-            <span className="text-uppercase">{ guess }</span>
-            <span>{ correctChars }, { misplacedChars }</span>
+          <ListGroup.Item className="row d-flex justify-content-between"
+            variant={getVariant(user, correctChars)} key={i}>
+            <strong className="col-5 text-muted font-monospace">{ user?.name }</strong>
+            <span className="col-5 text-uppercase">{ guess }</span>
+            <span className="col-2">{ correctChars }, { misplacedChars }</span>
           </ListGroup.Item>))
       }
     </ListGroup>

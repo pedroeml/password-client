@@ -40,6 +40,9 @@ export default function GameComponent({ loggedUser, gameId, onLeaveGame }) {
 
     if (winnerUser) {
       setWinner(winnerUser);
+      if (intervalRef?.current) {
+        clearInterval(intervalRef.current);
+      }
     }
   };
 
@@ -85,7 +88,7 @@ export default function GameComponent({ loggedUser, gameId, onLeaveGame }) {
         <Button className="col-2" variant="danger" onClick={onLeaveGame}>Leave Game</Button>
       </div>
       <div className="row col-5">
-        <GuessesComponent guesses={guesses} users={users}/>
+        <GuessesComponent guesses={guesses} users={users} loggedUser={loggedUser}/>
       </div>
     </>
   );
