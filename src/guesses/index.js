@@ -35,8 +35,8 @@ export default function GuessesComponent({ guesses, users, loggedUser }) {
           <ListGroup.Item className="row d-flex justify-content-between"
             variant={getVariant(user, correctChars)} key={i}>
             <strong className="col-5 text-muted font-monospace">{ user?.name }</strong>
-            <span className="col-5 text-uppercase">{ guess }</span>
-            <span className="col-2">{ correctChars }, { misplacedChars }</span>
+            <span className="col-4 d-flex justify-content-center text-uppercase font-monospace">{ guess }</span>
+            <span className="col-3 d-flex justify-content-end">{ correctChars }, { misplacedChars }</span>
           </ListGroup.Item>))
       }
     </ListGroup>

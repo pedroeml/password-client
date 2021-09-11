@@ -34,7 +34,7 @@ export default function NewGameComponent({ loggedUser, onNewGame }) {
   return (
     <>
       <h3 className="mt-3 mb-3 text-center">Create Your Game</h3>
-      <Form className="col-3" noValidate validated={validated} onSubmit={handleGuess}>
+      <Form className="col-10 col-sm-6 col-md-4 col-lg-3 col-xl-3" noValidate validated={validated} onSubmit={handleGuess}>
         <Form.Group className="mb-3">
           <Form.Label htmlFor="guess">Word</Form.Label>
           <Form.Control

@@ -81,13 +81,13 @@ export default function GameComponent({ loggedUser, gameId, onLeaveGame }) {
 
   return (
     <>
-      <div className="row align-items-start justify-content-around">
-        <div className="col-3">
+      <div className="row mb-2 align-items-start justify-content-around">
+        <div className="col-8 col-sm-6 col-md-5 col-lg-4 col-xl-3">
           <GuessComponent guesses={guesses} disabled={winner || game?.ownerUserId === loggedUser.id} onGuess={handleGuess}/>
         </div>
-        <Button className="col-2" variant="danger" onClick={onLeaveGame}>Leave Game</Button>
+        <Button className="col-3 col-sm-3 col-md-3 col-lg-2 col-xl-2" variant="danger" onClick={onLeaveGame}>Leave Game</Button>
       </div>
-      <div className="row col-5">
+      <div className="row col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
         <GuessesComponent guesses={guesses} users={users} loggedUser={loggedUser}/>
       </div>
     </>
