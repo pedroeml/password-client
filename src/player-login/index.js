@@ -32,7 +32,7 @@ export default function PlayerLoginComponent({ onLogin, onNotFound }) {
   }, [username, onLogin, onNotFound]);
 
   return (
-    <div className="form-container col-3 d-flex align-items-center">
+    <div className="form-container d-flex justify-content-center align-items-center col-12">
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
           <Form.Label htmlFor="username">User name</Form.Label>

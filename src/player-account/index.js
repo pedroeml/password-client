@@ -60,7 +60,6 @@ export default function PlayerAccountComponent({ onLogin, onLogout }) {
         setUser(data);
       })
       .catch(({ response, request}) => {
-
         const status = response?.status ?? request?.status;
 
         if (status === 403) {
