@@ -40,7 +40,7 @@ export default function NewGameComponent({ loggedUser, onNewGame }) {
           <Form.Control
             id="guess"
             type="text"
-            placeholder="Enter your guess"
+            placeholder="Enter the game answer"
             onChange={e => setAnswer(e.target.value.toLowerCase())}
             isInvalid={answer.length > 0 && !isFiveCharsLong}
             aria-describedby="guessHelpBlock"

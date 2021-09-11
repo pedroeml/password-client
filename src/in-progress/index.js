@@ -55,7 +55,7 @@ export default function InProgressComponent({ onLoadGames, onJoinGame }) {
 
   return (
     <>
-      <h2 className="mt-3 mb-3 text-center">Games In Progress</h2>
+      { games?.length && <h2 className="mt-3 mb-3 text-center">Games In Progress</h2> }
       <div className="row justify-content-around">
         { games.map((game, i) => <InProgressCardComponent
             key={i}
